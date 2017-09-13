@@ -1,0 +1,117 @@
+.mainDiv {
+    width: 200px;
+    height: 50px;
+    border: 5px solid black;
+    position: relative;
+}
+
+.mainDiv:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    top: -5px;
+    left: -5px;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    border-left: 0px solid white;
+    border-bottom: 0px solid white;
+    animation-name: red;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes red {
+    0% {
+        width: 30px;
+        height: 0;
+        top: -5px;
+        left: -5px;
+        border-top: 5px solid white;
+        border-right: 5px solid white;
+        border-left: 0px solid white;
+        border-bottom: 0px solid white;
+    }
+    25% {
+        width: 30px;
+        height: 0;
+        top: -5px;
+        left: 170px;
+        border-top: 5px solid white;
+        border-right: 5px solid white;
+        border-left: 0px solid white;
+        border-bottom: 0px solid white;
+    }
+    32.5% {
+        width: 0px;
+        height: 30px;
+        top: -5px;
+        left: 200px;
+        border-top: 5px solid white;
+        border-right: 5px solid white;
+        border-left: 0px solid white;
+        border-bottom: 0px solid white;
+    }
+    42.5% {
+        width: 0px;
+        height: 30px;
+        top: 20px;
+        left: 200px;
+        border-top: 0px solid white;
+        border-right: 5px solid white;
+        border-left: 0px solid white;
+        border-bottom: 5px solid white;
+    }
+    50% {
+        width: 30px;
+        height: 0;
+        top: 50px;
+        left: 170px;
+        border-top: 0px solid white;
+        border-right: 5px solid white;
+        border-left: 0px solid white;
+        border-bottom: 5px solid white;
+    }
+    75% {
+        width: 30px;
+        height: 0;
+        top: 50px;
+        left: -5px;
+        border-top: 0px solid white;
+        border-right: 0px solid white;
+        border-left: 5px solid white;
+        border-bottom: 5px solid white;
+    }
+    82.5% {
+        width: 0px;
+        height: 30px;
+        top: 20px;
+        left: -5px;
+        border-top: 0px solid white;
+        border-right: 0px solid white;
+        border-left: 5px solid white;
+        border-bottom: 5px solid white;
+    }
+    92.5% {
+        width: 0px;
+        height: 30px;
+        top: -5px;
+        left: -5px;
+        border-top: 5px solid white;
+        border-right: 0px solid white;
+        border-left: 5px solid white;
+        border-bottom: 0px solid white;
+    }
+    100% {
+        width: 30px;
+        height: 0;
+        top: -5px;
+        left: -5px;
+        border-top: 5px solid white;
+        border-right: 0px solid white;
+        border-left: 5px solid white;
+        border-bottom: 0px solid white;
+    }
+}
