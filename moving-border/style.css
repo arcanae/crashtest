@@ -1,117 +1,241 @@
+body {
+    margin: 5px;
+}
+
 .mainDiv {
+    background-image: url("../../logo.png");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 200px;
     height: 50px;
-    border: 5px solid black;
+    /* border: 3px4solid black; */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .mainDiv:after {
     content: '';
     display: block;
     position: absolute;
-    width: 30px;
+    width: 40px;
     height: 0px;
     top: -5px;
     left: -5px;
-    border-top: 5px solid white;
-    border-right: 5px solid white;
-    border-left: 0px solid white;
-    border-bottom: 0px solid white;
-    animation-name: red;
-    animation-duration: 2s;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    border-left: 0px solid black;
+    border-bottom: 0px solid black;
+    animation-name: borderAfter;
+    animation-duration: 2.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes red {
+.mainDiv:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 0;
+    top: 50px;
+    left: 160px;
+    border-top: 0px solid black;
+    border-right: 4px solid black;
+    border-left: 0px solid black;
+    border-bottom: 4px solid black;
+    animation-name: borderBefore;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes borderAfter {
     0% {
-        width: 30px;
+        width: 40px;
         height: 0;
         top: -5px;
         left: -5px;
-        border-top: 5px solid white;
-        border-right: 5px solid white;
-        border-left: 0px solid white;
-        border-bottom: 0px solid white;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 0px solid black;
     }
     25% {
-        width: 30px;
+        width: 40px;
         height: 0;
         top: -5px;
-        left: 170px;
-        border-top: 5px solid white;
-        border-right: 5px solid white;
-        border-left: 0px solid white;
-        border-bottom: 0px solid white;
+        left: 160px;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 0px solid black;
     }
     32.5% {
         width: 0px;
-        height: 30px;
+        height: 40px;
         top: -5px;
         left: 200px;
-        border-top: 5px solid white;
-        border-right: 5px solid white;
-        border-left: 0px solid white;
-        border-bottom: 0px solid white;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 0px solid black;
     }
     42.5% {
         width: 0px;
-        height: 30px;
-        top: 20px;
+        height: 40px;
+        top: 10px;
         left: 200px;
-        border-top: 0px solid white;
-        border-right: 5px solid white;
-        border-left: 0px solid white;
-        border-bottom: 5px solid white;
+        border-top: 0px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 4px solid black;
     }
     50% {
-        width: 30px;
+        width: 40px;
         height: 0;
         top: 50px;
-        left: 170px;
-        border-top: 0px solid white;
-        border-right: 5px solid white;
-        border-left: 0px solid white;
-        border-bottom: 5px solid white;
+        left: 160px;
+        border-top: 0px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 4px solid black;
     }
     75% {
-        width: 30px;
+        width: 40px;
         height: 0;
         top: 50px;
         left: -5px;
-        border-top: 0px solid white;
-        border-right: 0px solid white;
-        border-left: 5px solid white;
-        border-bottom: 5px solid white;
+        border-top: 0px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 4px solid black;
     }
     82.5% {
         width: 0px;
-        height: 30px;
-        top: 20px;
+        height: 40px;
+        top: 10px;
         left: -5px;
-        border-top: 0px solid white;
-        border-right: 0px solid white;
-        border-left: 5px solid white;
-        border-bottom: 5px solid white;
+        border-top: 0px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 4px solid black;
     }
     92.5% {
         width: 0px;
-        height: 30px;
+        height: 40px;
         top: -5px;
         left: -5px;
-        border-top: 5px solid white;
-        border-right: 0px solid white;
-        border-left: 5px solid white;
-        border-bottom: 0px solid white;
+        border-top: 4px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 0px solid black;
     }
     100% {
-        width: 30px;
+        width: 40px;
         height: 0;
         top: -5px;
         left: -5px;
-        border-top: 5px solid white;
-        border-right: 0px solid white;
-        border-left: 5px solid white;
-        border-bottom: 0px solid white;
+        border-top: 4px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 0px solid black;
+    }
+}
+
+@keyframes borderBefore {
+    0% {
+        width: 40px;
+        height: 0;
+        top: 50px;
+        left: 160px;
+        border-top: 0px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 4px solid black;
+    }
+    25% {
+        width: 40px;
+        height: 0;
+        top: 50px;
+        left: -5px;
+        border-top: 0px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 4px solid black;
+    }
+    32.5% {
+        width: 0px;
+        height: 40px;
+        top: 10px;
+        left: -5px;
+        border-top: 0px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 4px solid black;
+    }
+    42.5% {
+        width: 0px;
+        height: 40px;
+        top: -5px;
+        left: -5px;
+        border-top: 4px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 0px solid black;
+    }
+    50% {
+        width: 40px;
+        height: 0;
+        top: -5px;
+        left: -5px;
+        border-top: 4px solid black;
+        border-right: 0px solid black;
+        border-left: 4px solid black;
+        border-bottom: 0px solid black;
+    }
+    75% {
+        width: 40px;
+        height: 0;
+        top: -5px;
+        left: 160px;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 0px solid black;
+    }
+    82.5% {
+        width: 0px;
+        height: 40px;
+        top: -5px;
+        left: 200px;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 0px solid black;
+    }
+    92.5% {
+        width: 0px;
+        height: 40px;
+        top: 10px;
+        left: 200px;
+        border-top: 0px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 4px solid black;
+    }
+    100% {
+        width: 40px;
+        height: 0;
+        top: 50px;
+        left: 160px;
+        border-top: 0px solid black;
+        border-right: 4px solid black;
+        border-left: 0px solid black;
+        border-bottom: 4px solid black;
     }
 }
