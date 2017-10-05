@@ -2,7 +2,13 @@ getTime();
 
 function getTime() {
     now = new Date();
-    y2k = new Date("Sep 28 2017 14:00:00");
+    y2k = new Date("Nov 03 2017 19:00:00");
+
+    if (y2k < now) {
+        y2k = new Date("Nov 05 2017 19:00:00");
+        document.querySelector("#text").textContent = "END IN :";
+    }
+
     days = (y2k - now) / 1000 / 60 / 60 / 24;
     daysRound = Math.floor(days);
     if (daysRound < 10) {
@@ -31,6 +37,7 @@ function getTime() {
     document.querySelector("#days").textContent += hoursRound + ":";
     document.querySelector("#days").textContent += minutesRound + ":";
     document.querySelector("#days").textContent += secondsRound;
+
 
     newtime = window.setTimeout("getTime();", 1000);
 }
